@@ -1,9 +1,13 @@
-
 <%= link_to "create product", new_product_path %>
+
 <% @products.each do |product| %>
+
   <p><%= product.name %></p>
   <p><%= product.price %></p>
   <p><%= product.quantity %></p>
+
 <%= link_to "Show product", product %>
+<%= link_to "Edit product", edit_product_path(product) %>
+
 <% end %>
 
